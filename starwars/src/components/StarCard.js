@@ -1,19 +1,34 @@
 import React from "react";
+import {
+    Col,
+    Row,
+    Card,
+    CardBody,
+    CardTitle,
+    CardSubtitle
+  } from "reactstrap";
 
 const StarCard = props => {
     return(
-        <div className ="star-list" >
-            <h2>Star Wars Name: {props.star.name} </h2>
-            <h3>Height: {props.star.height}</h3>
-            <h3>Mass: {props.star.mass}</h3>
-            <h3>Hair Color: {props.star.hair_color}</h3>
-            <h3>Skin Color: {props.star.skin_color}</h3>
-            <h3>Eye Color: {props.star.eye_color}</h3>
-            <h3>Birth Year: {props.star.birth_year}</h3>
-            <h3>Gender: {props.star.gender}</h3>
-        </div>
+    <Row className="row">
+    <Col className="col-12 cold-md-4" >
+        <Card>
+            <CardBody>
+            <CardTitle className="col">{props.star.name}</CardTitle>
+            <CardSubtitle className="col">Height: {props.star.height}</CardSubtitle>
+            <CardSubtitle className="col">Mass: {props.star.mass}</CardSubtitle>
+            <CardSubtitle className="col">Hair Color: {props.star.hair_color}</CardSubtitle>
+            <CardSubtitle className="col">Skin Color: {props.star.skin_color}</CardSubtitle>
+            <CardSubtitle className="col">Eye Color: {props.star.eye_color}</CardSubtitle>
+            <CardSubtitle className="col">Birth Year: {props.star.birth_year}</CardSubtitle>
+            <CardSubtitle className="col">Gender: {props.star.gender}</CardSubtitle>
+            </CardBody>
+        </Card>
+    </Col>
+    </Row>
     );
 };
+
 
 export default StarCard;
 
